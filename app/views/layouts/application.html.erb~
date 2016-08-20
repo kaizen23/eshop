@@ -21,7 +21,6 @@
 			</ul>
 		</div>
 		<div id="main">
-			<h2> test cache</h2>
 			<%= yield %>
 		</div>
 	</div>
