@@ -50,9 +50,9 @@
 		width: 13em;
 		background: #141;}
 
-	form, div {
+	/*form, div {
 	display: inline;
-	}
+	}*/
 	#side input {
 	font-size: small;
 	}
