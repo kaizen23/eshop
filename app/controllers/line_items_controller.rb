@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
 	include CurrentCart
-	before_action :set_cart, only: [:create]
-  before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+	before_action :set_cart, only: [:create, :decrement]
+  before_action :set_line_item, only: [:show, :edit, :update, :destroy, :decrement]
 
   # GET /line_items
   # GET /line_items.json
@@ -66,6 +66,16 @@ class LineItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def decrement
+		@line_item.decrement
+		respond_to do |format|
+			if @line_item.save
+				format.js {@current_item = @line_item}				
+				format.html {redirect_to store_url, notice: 'Line item was successfully updated.' }		
+			end	
+		end	
+	end
 
   private
     # Use callbacks to share common setup or constraints between actions.
