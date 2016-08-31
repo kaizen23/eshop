@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  resources :line_items do
-		member do
-			put 'decrement'
-		end
+  #resources :line_items do
+		#member do
+			#put 'decrement'
+		#end
+	#end
+	resources :line_items do
+		put 'decrement', on: :member
+		put 'increment', on: :member
 	end
+
   resources :carts
   get 'store/index'
 
