@@ -16,4 +16,9 @@ def decrement
 	self
 end
 
+def increment
+   self.quantity +=1
+	 self
+end
+
 end
