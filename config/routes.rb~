@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
-  resources :line_items do
-		member do
-			put 'decrement'
-		end
+  resources :orders
+  #resources :line_items do
+		#member do
+			#put 'decrement'
+		#end
+	#end
+	resources :line_items do
+		put 'decrement', on: :member
+		put 'increment', on: :member
 	end
+
   resources :carts
   get 'store/index'
 
-  resources :products
+  resources :products do
+		get :who_bought, on: :member
+	end
 
 
 
