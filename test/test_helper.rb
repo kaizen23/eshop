@@ -10,7 +10,7 @@ class ActiveSupport::TestCase
   session[:user_id] = users(user).id
   end
   
-  def logout
+  def logout2
   session.delete :user_id
   end
   
