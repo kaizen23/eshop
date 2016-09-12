@@ -13,19 +13,22 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   resources :users
-  resources :orders
-  #resources :line_items do
-		#member do
-			#put 'decrement'
+  scope'(:locale)' do
+		resources :orders
+		#resources :line_items do
+			#member do
+				#put 'decrement'
+			#end
 		#end
-	#end
-	resources :line_items do
-		put 'decrement', on: :member
-		put 'increment', on: :member
-	end
+		resources :line_items do
+			put 'decrement', on: :member
+			put 'increment', on: :member
+		end
 
-  resources :carts
-  get 'store/index'
+		resources :carts
+		get 'store/index'
+		root 'store#index', as: 'store'
+	end
 
 	resources :products do
 		get :who_bought, on: :member
@@ -33,7 +36,7 @@ Rails.application.routes.draw do
 
 
 
-	root 'store#index', as: 'store'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
