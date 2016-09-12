@@ -1,0 +1,8 @@
+pl:
+  layouts:
+    application:
+      title:       "Ksiegarnia"
+      home:        "Pulpit"
+      questions:   "Pytania"
+      news:        "Nowosci"
+      contact:     "Kontakt"
