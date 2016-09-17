@@ -18,8 +18,39 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   layouts:
-  	application:
-  		title: "Title"
+    application:
+      title:       "Pragmatic Bookshelf"
+      home:        "Home"
+      questions:   "Questions"
+      news:        "News"
+      contact:     "Contact"
+      
+  store:
+    index:
+      add_html: "add to cart"
+      title_html: "Your catalog"
+      
+  carts:
+    cart:
+      title: "Your Cart"
+      empty: "Empty cart"
+      checkout: "Checkout"
+      
+  number:
+    currency:
+      format:
+				unit: "$"
+				precision: 2
+				separator: "."
+				delimiter: ","
+				format: "%u%n"
+
+
+
+
+
+
+
+

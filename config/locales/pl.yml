@@ -6,3 +6,13 @@ pl:
       questions:   "Pytania"
       news:        "Nowosci"
       contact:     "Kontakt"
+  store:
+    index:
+      add_html: "dodaj do karty"
+      title_html: "Twoj katalog"
+      
+  carts:
+    cart:
+      title: "Twoj koszyk"
+      empty: "Oproznij"
+      checkout: "Zamow"

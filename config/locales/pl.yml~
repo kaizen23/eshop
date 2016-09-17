@@ -1,0 +1,12 @@
+pl:
+  layouts:
+    application:
+      title:       "Ksiegarnia"
+      home:        "Pulpit"
+      questions:   "Pytania"
+      news:        "Nowosci"
+      contact:     "Kontakt"
+  store:
+    index:
+      add_html: "dodaj do karty"
+      title_html: "Twoj katalog"

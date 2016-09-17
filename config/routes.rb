@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
 		resources :carts
 		get 'store/index'
-		root 'store#index', as: 'store'
+		root 'store#index', as: 'store', via: :all
 	end
 
 	resources :products do

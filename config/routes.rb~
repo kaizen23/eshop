@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   resources :users
-  scope'(:local)' do
+  scope'(:locale)' do
 		resources :orders
 		#resources :line_items do
 			#member do
