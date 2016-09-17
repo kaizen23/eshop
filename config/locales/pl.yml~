@@ -10,3 +10,51 @@ pl:
     index:
       add_html: "dodaj do karty"
       title_html: "Twoj katalog"
+      
+  carts:
+    cart:
+      title: "Twoj koszyk"
+      empty: "Oproznij"
+      checkout: "Zamow"
+      
+  number:
+    currency:
+      format:
+        unit: "PLN"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
+      
+  orders:
+    new:
+      legend: "Prosze podac szczegoly"
+    form:
+      name: "Imie"
+      address_html: "Adres"
+      email: "mail"
+      pay_type: "plac w"
+      pay_prompt_html: "Wybierz sposob zaplaty"
+      submit: "Zaplac"
+      
+  activerecord:
+    models:
+      order: "zamowieniu"
+    attributes:
+      order:
+        name: "Imie"
+        address_html: "Adres"
+        email: "E-mail"
+        pay_type: "Sposob zaplaty"
+        
+    errors:
+      messages:
+        inclusion: "nie wybrano z listy"
+        blank: "Nie moze byc puste"
+  errors:
+    template:
+      body: "Problem wystapil z nastepujacych powodow:"
+      header:
+        one: "1 error ha impedido que este %{model} se guarde"
+        other: "%{count} bledow wystapilo w %{model} uniemozliwiajac jego zapisanie"
+  thanks: "Dziekuje za zamowienie""
