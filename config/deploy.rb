@@ -1,14 +1,21 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
-set :application, 'my_app_name'
+set :application, 'eshop'
+set :scm, :git
 set :repo_url, 'git@github.com:kaizen23/eshop.git'
+
+server '192.168.4.30', user: 'kaizen23', roles: %w{web app}
+set :user, 'kaizen23'
+#server "192.168.4.30"
+set :ssh_options, {:forward_agent => true}
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, "/home/kaizen23/public/eshop"
 
 # Default value for :scm is :git
 # set :scm, :git
