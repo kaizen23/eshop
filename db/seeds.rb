@@ -18,7 +18,7 @@ Product.create!(title: 'Programming Ruby 1.9 & 2.0',
 	image_url: 'ruby.jpg',
 	price: 49.95)
 
-Product.create!(title: 'Programming Ruby 1.9 & 2.0',
+Product.create!(title: 'Ruby with friends',
 	description:
 	%{<p>
 	Ruby is the fastest growing and most exciting dynamic language

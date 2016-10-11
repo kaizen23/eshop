@@ -1,6 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
+
 set :application, 'eshop'
 set :scm, :git
 set :repo_url, 'git@github.com:kaizen23/eshop.git'
@@ -15,7 +16,7 @@ set :ssh_options, {:forward_agent => true}
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
-set :deploy_to, "/home/kaizen23/public/#{application}"
+set :deploy_to, "/home/kaizen23/Public/eshop"
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -29,7 +30,12 @@ set :deploy_to, "/home/kaizen23/public/#{application}"
 
 # Default value for :pty is false
 # set :pty, true
+namespace :deploy do
+	desc "cause Passenger to initiate a restart"
 
+	after'deploy:publishing', 'deploy:restart'
+	end
+end
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
 
